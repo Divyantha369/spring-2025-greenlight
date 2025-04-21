@@ -92,7 +92,16 @@ Key features:
 
 ## Key Findings
 
-Our analysis reveals several critical factors that significantly impact box office success:
+- Director rating performance indicates that directors with stronger track records positively influence predictions.
+
+- Horror films also demonstrate positive effects, likely due to high ROI relative to their typically lower budgets, and Family films show a substantial positive impact on box office predictions.
+
+- Both very high budgets and very low budgets can have a positive impact on predictions.
+
+- Longer films consistently contribute to higher predicted box office, but this effect diminishes over time.
+  
+- Lead actor efficiency (return on investment) shows notable importance in driving positive predictions.
+
 
 
 ## References
