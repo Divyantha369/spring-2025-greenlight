@@ -14,7 +14,7 @@ This project builds a data-driven decision system that predicts whether a movie 
 
 ## Objectives
 
-While box office success is multi-dimensional (encompassing popularity, critical acclaim, cultural impact), our focus is primarily on **financial performance**. We've identified Return on Investment (ROI) as our primary success metric, with total gross revenue as a secondary metric when budget data is unavailable.
+While box office success is multi-dimensional (encompassing popularity, critical acclaim, and cultural impact), our focus is primarily on **financial performance**. We've identified Return on Investment (ROI) as our primary success metric.
 
 ### Challenges Addressed:
 
