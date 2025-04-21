@@ -65,6 +65,30 @@ Our analysis incorporates data from multiple sources, including:
 - Creative team information (directors, actors, producers)
 - Release strategy variables (season, competition, screens)
 
+## Our 
+
+The `EnhancedMovieBoxOfficePipeline` implements a sophisticated time-aware machine learning framework with these key features:
+
+### Time-Series Integrity
+- **Chronological splitting** of data by release date
+- **TimeSeriesSplit** cross-validation respecting temporal boundaries
+- **Fold-isolated feature scaling** to prevent data leakage
+
+### Advanced Ensemble Architecture
+- **Out-of-fold (OOF) prediction strategy** for stacked modeling
+- Base models trained on past data predict future-only validation sets
+- Meta-model combines predictions using Ridge regression
+
+### Model Support
+- Tree-based (RandomForest, XGBoost, LightGBM, CatBoost)
+- Linear and non-parametric (Ridge, Lasso, KNN, SVR)
+
+### Optimization & Interpretability
+- **Optuna-based hyperparameter tuning** with time-aware validation
+- **feature importance using ** ( SHAP)
+- Automated visualization generation for model comparison
+
+
 ## Key Findings
 
 Our analysis reveals several critical factors that significantly impact box office success:
