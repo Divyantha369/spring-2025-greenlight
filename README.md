@@ -88,10 +88,9 @@ Key features:
 - **Optuna-based hyperparameter tuning** with time-aware validation
 - **feature importance using SHAP** 
 
-
+![output](https://github.com/user-attachments/assets/499dab73-3a66-48b5-998c-1f164dbc0c6b)
 
 ## Key Findings
 
 Our analysis reveals several critical factors that significantly impact box office success:
 
-![output](https://github.com/user-attachments/assets/499dab73-3a66-48b5-998c-1f164dbc0c6b)
