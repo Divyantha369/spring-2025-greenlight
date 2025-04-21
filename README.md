@@ -5,12 +5,11 @@
 ![mermaid-ai-diagram-2025-04-19-045753](https://github.com/user-attachments/assets/45a249a4-dda6-4179-895c-6870738d7611)
 
 
-# 🎬 Movie Box Office Success Predictor
+# Movie Box Office Success Predictor
 
 > **A data science approach to predicting blockbusters before they happen**
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Data](https://img.shields.io/badge/movies-6600%2B-yellow.svg)](data/)
 
 ## Project Overview
