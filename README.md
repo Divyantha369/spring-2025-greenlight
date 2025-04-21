@@ -92,7 +92,7 @@ Key features:
 
 ## Key Findings
 
-- Director rating performance indicates that directors with stronger track records positively influence predictions.
+- Director rating performance indicates that directors with stronger track records positively influence predictions. 
 
 - Horror films also demonstrate positive effects, likely due to high ROI relative to their typically lower budgets, and Family films show a substantial positive impact on box office predictions.
 
