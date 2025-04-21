@@ -37,6 +37,7 @@ Our repository is organized to reflect our end-to-end data science workflow:
 |----------|-------------|
 | **`Import_Data.ipynb`** | Merges raw datasets from multiple sources into a unified `initial_build.pkl` for subsequent analysis |
 | **`Data_Cleaning.ipynb`** | Comprehensive data cleaning procedures producing the `clean_build.pkl` dataset |
+|**`engineer_features.ipynb`**| This Notebook contains all the feature engineering methods we used|
 | **`Webscraping_MissingValues.ipynb`** | Implements scraping strategies to retrieve missing values for critical fields from open data sources |
 | **`Comprehensive_MLPipeline.ipynb`** | Complete execution of our machine learning pipeline with model development, evaluation, and interpretation |
 |**`build_regression_models.ipynb`** |      |
