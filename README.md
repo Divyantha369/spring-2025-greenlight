@@ -51,7 +51,7 @@ Our repository is organized to reflect our end-to-end data science workflow:
 
 | Directory | Description |
 |-----------|-------------|
-| **`raw_data/`** | Contains all the original datasets collected from different sources including IMDb, TMDb, Box Office Mojo, and other industry databases |
+| **`raw_data/`** | Contains all the original datasets collected from different sources. |
 | **`processed_data/`** | Houses all intermediate and final processed datasets created throughout the analysis pipeline, including cleaned, merged, and feature-engineered datasets |
 
 
