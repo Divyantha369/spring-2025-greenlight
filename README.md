@@ -39,6 +39,7 @@ Our repository is organized to reflect our end-to-end data science workflow:
 | **`Data_Cleaning.ipynb`** | Comprehensive data cleaning procedures producing the `clean_build.pkl` dataset |
 | **`Webscraping_MissingValues.ipynb`** | Implements scraping strategies to retrieve missing values for critical fields from open data sources |
 | **`Comprehensive_MLPipeline.ipynb`** | Complete execution of our machine learning pipeline with model development, evaluation, and interpretation |
+|**`build_regression_models.ipynb`** |      |
 
 ### 🐍 Python Modules
 
@@ -52,7 +53,7 @@ Our analysis incorporates data from multiple sources, including:
 
 - Production budgets for 6,600+ movies (scraped from public sources)
 - Box office revenue (domestic and worldwide)
-- Film attributes (genre, runtime, MPAA rating, etc.)
+- Film attributes (genre, runtime,  rating, etc.)
 - Creative team information (directors, actors, producers)
 - Release strategy variables (season, competition, screens)
 
