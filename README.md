@@ -101,4 +101,5 @@ Our analysis reveals several critical factors that significantly impact box offi
 * Hong, S., & Wei, X. (2025). Blockbuster or bust? Silver screen effect and stock returns. *Review of Finance*, 1-30. [DOI: 10.1093/rof/rfaf004](https://doi.org/10.1093/rof/rfaf004)
 * Apala, K. R., Jose, M., Motnam, S., Chan, C. C., Liszka, K. J., & de Gregorio, F. (2013). Prediction of Movies Box Office Performance Using Social Media. *2013 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining*, 1209-1214.
 * Zhang, Z., Meng, Y., & Xiao, D. (2024). Prediction techniques of movie box office using neural networks and emotional mining. *Scientific Reports*, 14, 21209. [DOI: 10.1038/s41598-024-72340-z](https://doi.org/10.1038/s41598-024-72340-z)
+*  [https://open.spotify.com/episode/0gYjKq2fQDOZykEkg72L6t?si=jWg68PcKR7a30HsTBVDCCA](https://open.spotify.com/episode/0gYjKq2fQDOZykEkg72L6t?si=jWg68PcKR7a30HsTBVDCCA)
 
