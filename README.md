@@ -1,9 +1,6 @@
 # spring-2025-greenlight
 
 
-![mermaid-ai-diagram-2025-04-19-045753](https://github.com/user-attachments/assets/45a249a4-dda6-4179-895c-6870738d7611)
-
-
 # Movie Box Office Success Predictor
 
 > **A data science approach to predicting blockbusters before they happen**
@@ -65,16 +62,20 @@ Our analysis incorporates data from multiple sources, including:
 - Creative team information (directors, actors, producers)
 - Release strategy variables (season, competition, screens)
 
-## Our 
+## Overview of the ML pipeline
 
-The `EnhancedMovieBoxOfficePipeline` implements a sophisticated time-aware machine learning framework with these key features:
+Our strategy employs a four-stage workflow built on multiple base models (RandomForest, XGBoost, LightGBM, CatBoost, SVR, Lasso, and KNN) to capture diverse patterns in film data. After Optuna-driven hyperparameter optimization using time-series cross-validation, the system leverages a stacked ensemble architecture where base models generate chronologically-sound predictions that become features for a Ridge Regression meta-learner. This meta-model learns optimal weights for each algorithm's contribution, effectively combining their strengths while maintaining strict temporal boundaries to prevent future data leakage. Throughout this process, we also calculate SHAP values to quantify feature importance.
+
+![mermaid-ai-diagram-2025-04-19-045753](https://github.com/user-attachments/assets/45a249a4-dda6-4179-895c-6870738d7611)
+
+Key features:
 
 ### Time-Series Integrity
 - **Chronological splitting** of data by release date
 - **TimeSeriesSplit** cross-validation respecting temporal boundaries
 - **Fold-isolated feature scaling** to prevent data leakage
 
-### Advanced Ensemble Architecture
+### Ensemble Architecture
 - **Out-of-fold (OOF) prediction strategy** for stacked modeling
 - Base models trained on past data predict future-only validation sets
 - Meta-model combines predictions using Ridge regression
@@ -85,8 +86,8 @@ The `EnhancedMovieBoxOfficePipeline` implements a sophisticated time-aware machi
 
 ### Optimization & Interpretability
 - **Optuna-based hyperparameter tuning** with time-aware validation
-- **feature importance using ** ( SHAP)
-- Automated visualization generation for model comparison
+- **feature importance using SHAP** 
+
 
 
 ## Key Findings
