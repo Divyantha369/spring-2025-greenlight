@@ -47,6 +47,14 @@ Our repository is organized to reflect our end-to-end data science workflow:
 |--------|-------------|
 | **`model_pipeline.py`** | Core implementation of model classes used in the ML pipeline (imported by `Comprehensive_MLPipeline.ipynb`) |
 
+### 📁 Data Directories
+
+| Directory | Description |
+|-----------|-------------|
+| **`raw_data/`** | Contains all the original datasets collected from different sources including IMDb, TMDb, Box Office Mojo, and other industry databases |
+| **`processed_data/`** | Houses all intermediate and final processed datasets created throughout the analysis pipeline, including cleaned, merged, and feature-engineered datasets |
+
+
 ## Data Sources & Features
 
 Our analysis incorporates data from multiple sources, including:
