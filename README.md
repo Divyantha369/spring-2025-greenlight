@@ -1,9 +1,6 @@
 # spring-2025-greenlight
 
 
-![mermaid-ai-diagram-2025-04-19-045753](https://github.com/user-attachments/assets/45a249a4-dda6-4179-895c-6870738d7611)
-
-
 # Movie Box Office Success Predictor
 
 > **A data science approach to predicting blockbusters before they happen**
@@ -17,7 +14,7 @@ This project builds a data-driven decision system that predicts whether a movie 
 
 ## Objectives
 
-While box office success is multi-dimensional (encompassing popularity, critical acclaim, cultural impact), our focus is primarily on **financial performance**. We've identified Return on Investment (ROI) as our primary success metric, with total gross revenue as a secondary metric when budget data is unavailable.
+While box office success is multi-dimensional (encompassing popularity, critical acclaim, and cultural impact), our focus is primarily on **financial performance**. We've identified Return on Investment (ROI) as our primary success metric.
 
 ### Challenges Addressed:
 
@@ -65,16 +62,20 @@ Our analysis incorporates data from multiple sources, including:
 - Creative team information (directors, actors, producers)
 - Release strategy variables (season, competition, screens)
 
-## Our 
+## Overview of the ML pipeline
 
-The `EnhancedMovieBoxOfficePipeline` implements a sophisticated time-aware machine learning framework with these key features:
+Our strategy employs a four-stage workflow built on multiple base models (RandomForest, XGBoost, LightGBM, CatBoost, SVR, Lasso, and KNN) to capture diverse patterns in film data. After Optuna-driven hyperparameter optimization using time-series cross-validation, the system leverages a stacked ensemble architecture where base models generate chronologically-sound predictions that become features for a Ridge Regression meta-learner. This meta-model learns optimal weights for each algorithm's contribution, effectively combining their strengths while maintaining strict temporal boundaries to prevent future data leakage. Throughout this process, we also calculate SHAP values to quantify feature importance.
+
+![mermaid-ai-diagram-2025-04-19-045753](https://github.com/user-attachments/assets/45a249a4-dda6-4179-895c-6870738d7611)
+
+Key features:
 
 ### Time-Series Integrity
 - **Chronological splitting** of data by release date
 - **TimeSeriesSplit** cross-validation respecting temporal boundaries
 - **Fold-isolated feature scaling** to prevent data leakage
 
-### Advanced Ensemble Architecture
+### Ensemble Architecture
 - **Out-of-fold (OOF) prediction strategy** for stacked modeling
 - Base models trained on past data predict future-only validation sets
 - Meta-model combines predictions using Ridge regression
@@ -85,12 +86,29 @@ The `EnhancedMovieBoxOfficePipeline` implements a sophisticated time-aware machi
 
 ### Optimization & Interpretability
 - **Optuna-based hyperparameter tuning** with time-aware validation
-- **feature importance using ** ( SHAP)
-- Automated visualization generation for model comparison
+- **feature importance using SHAP** 
 
+![output](https://github.com/user-attachments/assets/499dab73-3a66-48b5-998c-1f164dbc0c6b)
 
 ## Key Findings
 
-Our analysis reveals several critical factors that significantly impact box office success:
+- Director rating performance indicates that directors with stronger track records positively influence predictions. 
 
-![output](https://github.com/user-attachments/assets/499dab73-3a66-48b5-998c-1f164dbc0c6b)
+- Horror films also demonstrate positive effects, likely due to high ROI relative to their typically lower budgets, and Family films show a substantial positive impact on box office predictions.
+
+- Both very high budgets and very low budgets can have a positive impact on predictions.
+
+- Longer films consistently contribute to higher predicted box office, but this effect diminishes over time.
+  
+- Lead actor efficiency (return on investment) shows notable importance in driving positive predictions.
+
+
+
+## References
+
+* Quader, N., Chaki, D., Gani, M. O., & Ali, M. H. (2017). A Machine Learning Approach to Predict Movie Box-Office Success. *2017 20th International Conference of Computer and Information Technology (ICCIT)*, 1-6. IEEE.
+* Hong, S., & Wei, X. (2025). Blockbuster or bust? Silver screen effect and stock returns. *Review of Finance*, 1-30. [DOI: 10.1093/rof/rfaf004](https://doi.org/10.1093/rof/rfaf004)
+* Apala, K. R., Jose, M., Motnam, S., Chan, C. C., Liszka, K. J., & de Gregorio, F. (2013). Prediction of Movies Box Office Performance Using Social Media. *2013 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining*, 1209-1214.
+* Zhang, Z., Meng, Y., & Xiao, D. (2024). Prediction techniques of movie box office using neural networks and emotional mining. *Scientific Reports*, 14, 21209. [DOI: 10.1038/s41598-024-72340-z](https://doi.org/10.1038/s41598-024-72340-z)
+* Is There a Right Way to Use AI to Make Movies? [https://open.spotify.com/episode/0gYjKq2fQDOZykEkg72L6t?si=jWg68PcKR7a30HsTBVDCCA](https://open.spotify.com/episode/0gYjKq2fQDOZykEkg72L6t?si=jWg68PcKR7a30HsTBVDCCA)
+
